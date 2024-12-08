@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{417B1895-CD0F-4AFA-829F-FF6CD4F38AFA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ATM_useMVC</RootNamespace>
+    <AssemblyName>ATM_useMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Ban_Acc.cs" />
+    <Compile Include="Controller\Check_ATM.cs" />
+    <Compile Include="Controller\Check_Cash_ctrl.cs" />
+    <Compile Include="Controller\Check_login.cs" />
+    <Compile Include="Controller\Check_login_admin.cs" />
+    <Compile Include="Controller\Check_Report_ctrl.cs" />
+    <Compile Include="Controller\manager_card_ctrl.cs" />
+    <Compile Include="Controller\manager_User_Ctrl.cs" />
+    <Compile Include="Controller\Mini_load.cs" />
+    <Compile Include="Controller\Print.cs" />
+    <Compile Include="Controller\Trans_ctrl.cs" />
+    <Compile Include="Controller\Withdraw_ctrl.cs" />
+    <Compile Include="Models\Accounts.cs" />
+    <Compile Include="Models\Machine.cs" />
+    <Compile Include="View\Admin_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin_dashboard.Designer.cs">
+      <DependentUpon>Admin_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Admin_login.Designer.cs">
+      <DependentUpon>Admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Balance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Balance.Designer.cs">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Check_Cash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Check_Cash.Designer.cs">
+      <DependentUpon>Check_Cash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Check_Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Check_Reports.Designer.cs">
+      <DependentUpon>Check_Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormATM_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormATM_Admin.Designer.cs">
+      <DependentUpon>FormATM_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Landing_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Landing_Page.Designer.cs">
+      <DependentUpon>Landing_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\manager_card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\manager_card.Designer.cs">
+      <DependentUpon>manager_card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\manager_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\manager_user.Designer.cs">
+      <DependentUpon>manager_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Mini.Designer.cs">
+      <DependentUpon>Mini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StartScreen.Designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EnumErrCode.cs" />
+    <Compile Include="Models\FunctionResult.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Trans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Trans.Designer.cs">
+      <DependentUpon>Trans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Withdraw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Withdraw.Designer.cs">
+      <DependentUpon>Withdraw.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Admin_dashboard.resx">
+      <DependentUpon>Admin_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Admin_login.resx">
+      <DependentUpon>Admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Balance.resx">
+      <DependentUpon>Balance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Check_Cash.resx">
+      <DependentUpon>Check_Cash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Check_Reports.resx">
+      <DependentUpon>Check_Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormATM_Admin.resx">
+      <DependentUpon>FormATM_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Landing_Page.resx">
+      <DependentUpon>Landing_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\manager_card.resx">
+      <DependentUpon>manager_card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\manager_user.resx">
+      <DependentUpon>manager_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Mini.resx">
+      <DependentUpon>Mini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Trans.resx">
+      <DependentUpon>Trans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Withdraw.resx">
+      <DependentUpon>Withdraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Models\Database.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Database.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\Database.dbml.layout">
+      <DependentUpon>Database.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="returnCard.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
