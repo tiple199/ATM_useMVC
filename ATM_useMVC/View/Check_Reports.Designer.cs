@@ -30,7 +30,7 @@
         {
             this.btnBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLastWeek = new System.Windows.Forms.Button();
+            this.btnAllData = new System.Windows.Forms.Button();
             this.btnYesterday = new System.Windows.Forms.Button();
             this.btnToday = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,18 +60,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(750, 290);
             this.dataGridView1.TabIndex = 8;
             // 
-            // btnLastWeek
+            // btnAllData
             // 
-            this.btnLastWeek.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLastWeek.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLastWeek.Location = new System.Drawing.Point(614, 92);
-            this.btnLastWeek.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnLastWeek.Name = "btnLastWeek";
-            this.btnLastWeek.Size = new System.Drawing.Size(165, 63);
-            this.btnLastWeek.TabIndex = 7;
-            this.btnLastWeek.Text = "Tất cả dữ liệu";
-            this.btnLastWeek.UseVisualStyleBackColor = false;
-            this.btnLastWeek.Click += new System.EventHandler(this.btnLastWeek_Click);
+            this.btnAllData.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAllData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllData.Location = new System.Drawing.Point(614, 92);
+            this.btnAllData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnAllData.Name = "btnAllData";
+            this.btnAllData.Size = new System.Drawing.Size(165, 63);
+            this.btnAllData.TabIndex = 7;
+            this.btnAllData.Text = "Tất cả dữ liệu";
+            this.btnAllData.UseVisualStyleBackColor = false;
+            this.btnAllData.Click += new System.EventHandler(this.btnLastWeek_Click);
             // 
             // btnYesterday
             // 
@@ -105,7 +105,7 @@
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnLastWeek);
+            this.Controls.Add(this.btnAllData);
             this.Controls.Add(this.btnYesterday);
             this.Controls.Add(this.btnToday);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -122,7 +122,7 @@
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnLastWeek;
+        private System.Windows.Forms.Button btnAllData;
         private System.Windows.Forms.Button btnYesterday;
         private System.Windows.Forms.Button btnToday;
     }

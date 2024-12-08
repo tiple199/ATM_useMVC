@@ -24,5 +24,18 @@ namespace ATM_useMVC.Controller
             return result;
 
         }
+
+        public FunctionResult<Boolean> Unlock_acc(string Accno)
+        {
+            FunctionResult<Boolean> result = new FunctionResult<Boolean>();
+            var checkCardNo = db.Accounts.FirstOrDefault(Card => Card.AccNo == Accno);
+            checkCardNo.AtmStatus = "Active";
+            db.SubmitChanges();
+            result.ErrCode = EnumErrCode.Success;
+            result.ErrMsg = "Bạn được thử lại một lần nữa!";
+            result.Data = true;
+            return result;
+
+        }
     }
 }

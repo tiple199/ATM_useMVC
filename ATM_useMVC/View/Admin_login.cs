@@ -73,5 +73,10 @@ namespace ATM_useMVC.View
         private void Admin_login_Load(object sender, EventArgs e)
         {
         }
+
+        private void Admin_login_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

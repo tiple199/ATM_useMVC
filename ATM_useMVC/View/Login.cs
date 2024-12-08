@@ -31,6 +31,20 @@ namespace ATM_useMVC.View
             txtPin.Text = "";
         }
 
+        private async void DelayExecution()
+        {
+            count = 3;
+            MessageBox.Show("Vui lòng chờ 5 phút rồi thực hiện lại", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            await Task.Delay(30000);
+            var rs2 = Ban_Acc.Unlock_acc(txtCardNo.Text);
+            switch (rs2.ErrCode)
+            {
+                case Models.EnumErrCode.Success:
+                    MessageBox.Show(rs2.ErrMsg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+            }
+        }
+
         private void lg_Click(object sender, EventArgs e)
         {
            if (txtCardNo.Text == "" || txtCardNo.Text == "xxxx-xxxx-xxxx")
@@ -77,7 +91,9 @@ namespace ATM_useMVC.View
                                             MessageBox.Show(rs1.ErrMsg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                             Ban_Acc.Ban_acc(txtCardNo.Text);
                                         break;
-                                    }    
+                                    }
+                                    DelayExecution();
+
                                 }
 
                             }
