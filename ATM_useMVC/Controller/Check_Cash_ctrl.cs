@@ -102,7 +102,7 @@ namespace ATM_useMVC.Controller
                 else
                 {
                     result.ErrCode = EnumErrCode.Error;
-                    result.ErrMsg = "Số tiền thêm vào phải là số chia hết cho số tiền cần thêm và lớn hơn hoặc số đó!";
+                    result.ErrMsg = "Số tiền thêm vào phải là bội số của số tiền cần thêm!";
                     result.Data = false;
                 }
             }

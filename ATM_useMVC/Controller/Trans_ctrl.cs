@@ -64,7 +64,7 @@ namespace ATM_useMVC.Controller
             }
             catch (Exception ex) {
                 result.ErrCode = EnumErrCode.Error;
-                result.ErrMsg = "Có lỗi xảy ra trong quá trình chuyển";
+                result.ErrMsg = ex.Message;
                 result.Data = false;
             }
             return result;

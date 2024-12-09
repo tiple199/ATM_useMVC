@@ -69,7 +69,8 @@ namespace ATM_useMVC.View
         {
             try
             {
-                var rs = T.f_Trans(txtAccNo.Text, Convert.ToInt32(txtAmount.Text));
+                int Amount = Convert.ToInt32(txtAmount.Text);
+                var rs = T.f_Trans(txtAccNo.Text, Amount);
                 switch (rs.ErrCode)
                 {
                     case Models.EnumErrCode.Success:

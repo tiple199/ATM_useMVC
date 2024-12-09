@@ -35,7 +35,7 @@ namespace ATM_useMVC.Controller
             catch (Exception ex)
             {
                 rs.ErrCode = EnumErrCode.Error;
-                rs.ErrMsg = "Có lỗi xáy ra trong quá trình lấy dữ liệu";
+                rs.ErrMsg = ex.Message;
                 rs.Data = null;
             }
             return rs;

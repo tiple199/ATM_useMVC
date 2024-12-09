@@ -19,30 +19,29 @@ namespace ATM_useMVC.Controller
 
             if (checkCardNo != null)
             {
-
-                if (checkCardNo.PIN == Pin)
-                {
-                    if(checkCardNo.AtmStatus == "Active")
-                    {
-                        Accounts.AccNo = cardNo;
-                        Accounts.balance = Convert.ToInt32(checkCardNo.Balance);
-                        Accounts.AtmStatus = checkCardNo.AtmStatus;
-                        result.ErrCode = EnumErrCode.Success;
-                        result.ErrMsg = "Đăng nhập thành công";
-                        result.Data = true;
+                if (checkCardNo.AtmStatus == "Active") {
+                    if (checkCardNo.PIN == Pin)
+                    {           
+                         Accounts.AccNo = cardNo;
+                         Accounts.balance = Convert.ToInt32(checkCardNo.Balance);
+                         Accounts.AtmStatus = checkCardNo.AtmStatus;
+                         result.ErrCode = EnumErrCode.Success;
+                         result.ErrMsg = "Đăng nhập thành công";
+                         result.Data = true;
+                                     
                     }
+
                     else
                     {
                         result.ErrCode = EnumErrCode.Error;
-                        result.ErrMsg = "Thẻ đã hết hạn hoặc bị khóa";
+                        result.ErrMsg = "Mật khẩu không chính xác!";
                         result.Data = false;
                     }
                 }
-                    
                 else
                 {
                     result.ErrCode = EnumErrCode.Error;
-                    result.ErrMsg = "Mật khẩu không chính xác!";
+                    result.ErrMsg = "Thẻ đã hết hạn hoặc bị khóa";
                     result.Data = false;
                 }
             }

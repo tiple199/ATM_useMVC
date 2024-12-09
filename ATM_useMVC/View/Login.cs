@@ -43,6 +43,7 @@ namespace ATM_useMVC.View
                     MessageBox.Show(rs2.ErrMsg, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
             }
+            lg.Enabled = true;
         }
 
         private void lg_Click(object sender, EventArgs e)
@@ -92,6 +93,7 @@ namespace ATM_useMVC.View
                                             Ban_Acc.Ban_acc(txtCardNo.Text);
                                         break;
                                     }
+                                    lg.Enabled = false;
                                     DelayExecution();
 
                                 }
